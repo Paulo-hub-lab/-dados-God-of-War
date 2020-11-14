@@ -1,0 +1,272 @@
+from tkinter import *
+root = Tk()
+root.title("projeto God of War")
+root.geometry("522x500+440+100")
+root["background"] = "black"
+
+#funções
+
+def god_of_war():
+    top_level = Toplevel()
+    top_level.title("dados God of War")
+    top_level.geometry("280x250+1000+100")
+    top_level.resizable(FALSE, FALSE)
+    top_level["background"] = "black"
+
+    dados_god = Label(
+        top_level,
+        text = "dados God of War",
+        width = 15,
+        height = 1,
+        bd = 10,
+        relief = "raised",
+        bg = "white",
+        fg = "black"
+    )
+    dados_god.pack()
+
+    texts = Label(
+        top_level,
+        text = "lançamento: 2005\n"
+               "\n"
+               "gêneros: Hack and slash\n"
+               "\n"
+               "indicações : VGX: Heróis mais fortes da história\n"
+               "\n"
+               "mitologia: Grega",
+        width = 50,
+        bg = "black",
+        fg = "white",
+        justify = CENTER
+    )
+    texts.pack()
+
+def god_of_war_2():
+    top_level_2 = Toplevel()
+    top_level_2.title("dados God of War ||")
+    top_level_2.geometry("280x250+1000+100")
+    top_level_2.resizable(FALSE, FALSE)
+    top_level_2["background"] = "black"
+
+    dados_god = Label (
+        top_level_2,
+        text="dados God of War ||",
+        width=15,
+        height=1,
+        bd=10,
+        relief="raised",
+        bg="white",
+        fg="black"
+    )
+    dados_god.pack()
+
+    texts = Label (
+        top_level_2,
+        text="lançamento: 2007\n"
+             "\n"
+             "gêneros: Hack and slash\n"
+             "\n"
+             "prêmios:\nBAFTA Video Games Award: Realização Técnica,\n"
+             "BAFTA Video Games Award: Roteiro e Personagem,\n"
+             "Satellite Award de Melhor Videogame."
+             "\n"
+             ""
+             "\n"
+             "mitologia: Grega",
+        width=50,
+        bg="black",
+        fg="white",
+        justify=CENTER
+    )
+    texts.pack()
+
+def god_of_war_3():
+    top_level_3 = Toplevel()
+    top_level_3.title("dados God of War |||")
+    top_level_3.geometry("280x250+1000+100")
+    top_level_3.resizable(FALSE, FALSE)
+    top_level_3["background"] = "black"
+
+    dados_god = Label (
+        top_level_3,
+        text="dados God of War |||",
+        width=15,
+        height=1,
+        bd=10,
+        relief="raised",
+        bg="white",
+        fg="black"
+    )
+    dados_god.pack ()
+
+    texts = Label (
+        top_level_3,
+        text="lançamento: 2010\n"
+             "\n"
+             "gêneros: Hack and slash\n"
+             "\n"
+             "prêmios:\nVGX: Melhor Jogo de PlayStation 3,\n"
+             "BAFTA Video Games Award: Realização Artística,\n"
+             "VGX: Jogo mais Antecipado,\n"
+             "VGX: Melhores Gráficos,\n"
+             "VGX: Maior Badass.\n"
+             ""
+             "\n"
+             "mitologia: Grega",
+        width=50,
+        bg="black",
+        fg="white",
+        justify=CENTER
+    )
+    texts.pack ()
+
+def god_of_war_4():
+    top_level_4 = Toplevel()
+    top_level_4.title("dados God of War 4")
+    top_level_4.geometry("325x289+1000+100")
+    top_level_4.resizable(FALSE, FALSE)
+    top_level_4["background"] = "black"
+
+    dados_god = Label (
+        top_level_4,
+        text="dados God of War 4",
+        width=15,
+        height=1,
+        bd=10,
+        relief="raised",
+        bg="white",
+        fg="black"
+    )
+    dados_god.pack()
+
+    texts = Label (
+        top_level_4,
+        text="lançamento: 2018\n"
+             "\n"
+             "gêneros: Hack and slash\n"
+             "\n"
+             "prêmios:\nThe Game Award para Jogo do Ano,\n"
+             "BAFTA Video Games Award: Melhor Jogo,\n"
+             "BAFTA Video Games Award: Melhor Áudio,\n"
+             "Writers Guild of America Award de Melhor Roteiro de Games,\n"
+             "The Game Award para Melhor Jogo de Ação/Aventura,\n"
+             "BAFTA Games Award: Melhor Música,\n"
+             "The Game Award for Best Studio/Game Direction,\n"
+             "BAFTA Games Award for Narrative,\n"
+             "BAFTA Video Games Award: Desempenho.\n"
+             ""
+             "\n"
+             "mitologia: Nórdica",
+        width=50,
+        bg="black",
+        fg="white",
+        justify=CENTER
+    )
+    texts.pack ()
+
+#menu_________________________
+
+menu_pri = Menu(root)
+root.config(menu = menu_pri)
+
+opções_menu = Menu(menu_pri)
+opções_menu.add_command(label = "God of War", command = god_of_war)
+opções_menu.add_command(label = "God of War ||", command = god_of_war_2)
+opções_menu.add_command(label = "God of War |||", command = god_of_war_3)
+opções_menu.add_command(label = "God of War 4", command = god_of_war_4)
+menu_pri.add_cascade(label = "opções",menu = opções_menu)
+#labels superiores_____________
+
+esquerda_superior = PhotoImage(file = "superior_esquerda.png")
+
+superior_esquerda = Label(
+    root,
+    image = esquerda_superior,
+    bg = "black"
+)
+superior_esquerda.grid(row = 0, column = 0)
+#_______________________#
+
+superior_centro = PhotoImage(file = "centro_superior.png")
+
+centro_superior = Label(
+    root,
+    image = superior_centro,
+    bg = "black"
+)
+centro_superior.grid(row = 0, column = 1)
+#________________________#
+
+direita_superior = PhotoImage(file = "superior_direito.png")
+
+superior_direita = Label(
+    root,
+    image = direita_superior,
+    bg = "black"
+)
+superior_direita.grid(row = 0, column = 2)
+
+#labels do centro______________
+
+esquerda_centro = PhotoImage(file = "centro_esquerda.png")
+
+centro_esquerda = Label(
+    root,
+    image = esquerda_centro,
+    bg = "black"
+)
+centro_esquerda.grid(row = 1, column = 0)
+#_________________________#
+
+centro = PhotoImage(file = "centro_centro.png")
+
+centro_centro = Label(
+    root,
+    image = centro,
+    bg ="black"
+)
+centro_centro.grid(row = 1, column = 1)
+#__________________________#
+
+direita_centro = PhotoImage(file = "centro_direita.png")
+
+centro_direita = Label(
+    root,
+    image = direita_centro,
+    bg ="black"
+)
+centro_direita.grid(row = 1, column = 2)
+
+#labels inferiores_____________
+
+direito_inferior = PhotoImage(file = "inferior_direito.png")
+
+inferior_direito = Label(
+    root,
+    image = direito_inferior,
+    bg ="black"
+)
+inferior_direito.grid(row = 2, column = 0)
+#___________________________#
+
+centro_inferior = PhotoImage(file = "inferior_centro.png")
+
+inferior_centro = Label(
+    root,
+    image = centro_inferior,
+    bg = "black"
+)
+inferior_centro.grid(row = 2, column = 1)
+#____________________________#
+
+esquerda_inferior = PhotoImage(file = "inferior_esquerdo.png")
+
+inferior_esquerda = Label(
+    root,
+    image = esquerda_inferior,
+    bg = "black"
+)
+
+inferior_esquerda.grid(row = 2, column = 2)
+
+root.mainloop()
